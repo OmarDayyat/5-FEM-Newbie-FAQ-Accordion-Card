@@ -1,0 +1,126 @@
+@import "_variables.scss";
+
+/*================
+  General
+==================*/
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html{
+  background:linear-gradient($Soft-violet 50%,$Soft-blue);
+  background-repeat: no-repeat;
+  font-size: 12px;
+  font-family: $font;
+  height: 100vh;
+}
+
+body{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  height: 100vh;
+}
+
+h1{
+  color: $Very-dark-desaturated-blue;
+}
+
+hr{
+  border: 0;
+  border-top: 1px solid $Light-grayish-blue;
+}
+
+/*================
+  Main Container
+==================*/
+
+.main-container{
+  display: flex;
+  background: white;
+  width: 70vw;
+  min-height: 65vh;
+  border-radius: 20px;
+}
+
+/*================
+  Image Container
+==================*/
+
+.image-container{
+  position: relative;
+  background-image: url("../images/illustration-woman-online-desktop.svg") ,url("../images/bg-pattern-desktop.svg");
+  background-position: right 60%;
+  background-repeat: no-repeat;
+  height: auto;
+  width: 55%;
+  overflow: hidden;
+}
+.box-image{
+  position: absolute;
+  top: 44%;
+  right: 78%;
+}
+
+
+/*================
+  Info Container
+==================*/
+
+.info-container{
+  width: 75%;
+  padding: 40px 80px;
+  img{
+    transition: 0.1s ease-in-out;
+  }
+  .drop-down{
+    position: relative;
+    margin: 20px 0;
+    h4{
+      cursor: pointer;
+      color: $Dark-grayish-blue;
+      &:hover{
+        color: $Soft-red;
+      }
+      span{
+        position: absolute;
+        right: 2%;
+      }
+    }
+    p{
+      display: none;
+      margin-top: 20px;
+      color:$Dark-grayish-blue;
+      line-height: 1.5;
+    }
+  }
+}
+
+.show{
+    display: block;
+    transform: rotate(-180deg);
+    background-color: red;
+  }
+
+  .shown{
+        color: red;
+      }
+
+
+/*================
+  Attribution
+==================*/
+
+.attribution {
+   font-size: 11px;
+   text-align: center; 
+   margin-top: 20px;
+    a {
+       color: hsl(228, 45%, 44%);
+       }
+  }
