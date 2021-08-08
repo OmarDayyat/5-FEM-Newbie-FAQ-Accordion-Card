@@ -15,7 +15,8 @@ html{
   background-repeat: no-repeat;
   font-size: 12px;
   font-family: $font;
-  height: 100vh;
+  min-height: 100%;
+
 }
 
 body{
@@ -23,8 +24,7 @@ body{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 40px;
-  height: 100vh;
+  padding: 60px;
 }
 
 h1{
@@ -42,6 +42,7 @@ hr{
 
 .main-container{
   display: flex;
+  position: relative;
   background: white;
   width: 70vw;
   min-height: 65vh;
@@ -53,7 +54,6 @@ hr{
 ==================*/
 
 .image-container{
-  position: relative;
   background-image: url("../images/illustration-woman-online-desktop.svg") ,url("../images/bg-pattern-desktop.svg");
   background-position: right 60%;
   background-repeat: no-repeat;
@@ -63,8 +63,8 @@ hr{
 }
 .box-image{
   position: absolute;
-  top: 44%;
-  right: 78%;
+  top: 46%;
+  right: 91%;
 }
 
 
@@ -98,18 +98,23 @@ hr{
       color:$Dark-grayish-blue;
       line-height: 1.5;
     }
+   
   }
 }
 
 .show{
     display: block;
+    visibility: visible;
     transform: rotate(-180deg);
-    background-color: red;
   }
 
-  .shown{
-        color: red;
-      }
+  .hide{
+    display: block !important;
+  }
+
+.shown{
+  color: $Very-dark-desaturated-blue !important;
+}
 
 
 /*================
@@ -123,4 +128,75 @@ hr{
     a {
        color: hsl(228, 45%, 44%);
        }
+  }
+
+  @media only screen and (max-width: 1024px){
+    
+/*================
+  Main Container
+==================*/
+
+.main-container{
+  display: flex;
+  flex-direction: column;
+  background: white;
+  width: 70vw;
+  min-height: 85vh;
+  border-radius: 20px;
+}
+
+/*================
+  Image Container
+==================*/
+
+.image-container{
+  position: relative;
+  background-image: url("../images/illustration-woman-online-desktop.svg") ,url("../images/bg-pattern-desktop.svg");
+  background-repeat: no-repeat;
+  background-position:  bottom 100% ;
+  height: 50vh;
+  width: 100%;
+  overflow: visible;
+}
+.box-image{
+  position: absolute;
+  top: 44%;
+  right: 78%;
+}
+
+
+/*================
+  Info Container
+==================*/
+
+.info-container{
+  height: auto;
+  width: 100%;
+  padding: 40px 80px;
+  img{
+    transition: 0.1s ease-in-out;
+  }
+  .drop-down{
+    position: relative;
+    margin: 20px 0;
+    h4{
+      cursor: pointer;
+      color: $Dark-grayish-blue;
+      &:hover{
+        color: $Soft-red;
+      }
+      span{
+        position: absolute;
+        right: 2%;
+      }
+    }
+    p{
+      // display: none;
+      // display: block;
+      margin-top: 20px;
+      color:$Dark-grayish-blue;
+      line-height: 1.5;
+    }
+  }
+}
   }

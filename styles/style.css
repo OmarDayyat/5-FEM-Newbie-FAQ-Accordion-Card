@@ -15,7 +15,7 @@ html {
   background-repeat: no-repeat;
   font-size: 12px;
   font-family: "Kumbh Sans", sans-serif;
-  height: 100vh;
+  min-height: 100%;
 }
 
 body {
@@ -32,8 +32,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 40px;
-  height: 100vh;
+  padding: 60px;
 }
 
 h1 {
@@ -52,6 +51,7 @@ hr {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: relative;
   background: white;
   width: 70vw;
   min-height: 65vh;
@@ -62,7 +62,6 @@ hr {
   Image Container
 ==================*/
 .image-container {
-  position: relative;
   background-image: url("../images/illustration-woman-online-desktop.svg"), url("../images/bg-pattern-desktop.svg");
   background-position: right 60%;
   background-repeat: no-repeat;
@@ -73,8 +72,8 @@ hr {
 
 .box-image {
   position: absolute;
-  top: 44%;
-  right: 78%;
+  top: 46%;
+  right: 91%;
 }
 
 /*================
@@ -118,13 +117,17 @@ hr {
 
 .show {
   display: block;
+  visibility: visible;
   -webkit-transform: rotate(-180deg);
           transform: rotate(-180deg);
-  background-color: red;
+}
+
+.hide {
+  display: block !important;
 }
 
 .shown {
-  color: red;
+  color: #1d1e35 !important;
 }
 
 /*================
@@ -138,5 +141,73 @@ hr {
 
 .attribution a {
   color: #3e52a3;
+}
+
+@media only screen and (max-width: 1024px) {
+  /*================
+  Main Container
+==================*/
+  .main-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    background: white;
+    width: 70vw;
+    min-height: 85vh;
+    border-radius: 20px;
+  }
+  /*================
+  Image Container
+==================*/
+  .image-container {
+    position: relative;
+    background-image: url("../images/illustration-woman-online-desktop.svg"), url("../images/bg-pattern-desktop.svg");
+    background-repeat: no-repeat;
+    background-position: bottom 100%;
+    height: 50vh;
+    width: 100%;
+    overflow: visible;
+  }
+  .box-image {
+    position: absolute;
+    top: 44%;
+    right: 78%;
+  }
+  /*================
+  Info Container
+==================*/
+  .info-container {
+    height: auto;
+    width: 100%;
+    padding: 40px 80px;
+  }
+  .info-container img {
+    -webkit-transition: 0.1s ease-in-out;
+    transition: 0.1s ease-in-out;
+  }
+  .info-container .drop-down {
+    position: relative;
+    margin: 20px 0;
+  }
+  .info-container .drop-down h4 {
+    cursor: pointer;
+    color: #787887;
+  }
+  .info-container .drop-down h4:hover {
+    color: #f47c57;
+  }
+  .info-container .drop-down h4 span {
+    position: absolute;
+    right: 2%;
+  }
+  .info-container .drop-down p {
+    margin-top: 20px;
+    color: #787887;
+    line-height: 1.5;
+  }
 }
 /*# sourceMappingURL=style.css.map */
