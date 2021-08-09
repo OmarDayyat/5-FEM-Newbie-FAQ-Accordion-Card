@@ -80,40 +80,27 @@ hr{
   }
   .drop-down{
     position: relative;
-    margin: 20px 0;
-    h4{
-      cursor: pointer;
-      color: $Dark-grayish-blue;
-      &:hover{
-        color: $Soft-red;
-      }
-      span{
-        position: absolute;
-        right: 2%;
-      }
-    }
-    p{
-      display: none;
-      margin-top: 20px;
-      color:$Dark-grayish-blue;
-      line-height: 1.5;
-    }
-   
+    margin: 20px 0;   
   }
 }
 
-.show{
-    display: block;
-    visibility: visible;
-    transform: rotate(-180deg);
+h4{
+  cursor: pointer;
+  color: $Dark-grayish-blue;
+  &:hover{
+    color: $Soft-red;
   }
-
-  .hide{
-    display: block !important;
+  span{
+    position: absolute;
+    right: 2%;
   }
+}
 
-.shown{
-  color: $Very-dark-desaturated-blue !important;
+p{
+  display: none;
+  margin-top: 20px;
+  color:$Dark-grayish-blue;
+  line-height: 1.5;
 }
 
 
@@ -128,6 +115,22 @@ hr{
     a {
        color: hsl(228, 45%, 44%);
        }
+  }
+
+/*================
+  JavaScript
+==================*/
+
+.rotate{
+    transform: rotate(-180deg);
+  }
+
+.change-color{
+    color: $Very-dark-desaturated-blue  ;
+  }
+
+.show{
+    display: block ;
   }
 
   @media only screen and (max-width: 1024px){

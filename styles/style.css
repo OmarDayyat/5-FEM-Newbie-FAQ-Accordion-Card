@@ -94,40 +94,25 @@ hr {
   margin: 20px 0;
 }
 
-.info-container .drop-down h4 {
+h4 {
   cursor: pointer;
   color: #787887;
 }
 
-.info-container .drop-down h4:hover {
+h4:hover {
   color: #f47c57;
 }
 
-.info-container .drop-down h4 span {
+h4 span {
   position: absolute;
   right: 2%;
 }
 
-.info-container .drop-down p {
+p {
   display: none;
   margin-top: 20px;
   color: #787887;
   line-height: 1.5;
-}
-
-.show {
-  display: block;
-  visibility: visible;
-  -webkit-transform: rotate(-180deg);
-          transform: rotate(-180deg);
-}
-
-.hide {
-  display: block !important;
-}
-
-.shown {
-  color: #1d1e35 !important;
 }
 
 /*================
@@ -141,6 +126,22 @@ hr {
 
 .attribution a {
   color: #3e52a3;
+}
+
+/*================
+  JavaScript
+==================*/
+.rotate {
+  -webkit-transform: rotate(-180deg);
+          transform: rotate(-180deg);
+}
+
+.change-color {
+  color: #1d1e35;
+}
+
+.show {
+  display: block;
 }
 
 @media only screen and (max-width: 1024px) {
