@@ -142,11 +142,8 @@ p {
 .attribution {
   font-size: 11px;
   text-align: center;
-  position: absolute;
-  right: 0;
-  left: 0;
-  bottom: 0;
-  margin-bottom: 0;
+  position: relative;
+  margin-bottom: 10px;
 }
 
 .attribution a {
@@ -166,6 +163,9 @@ p {
   }
   .arrow {
     right: 0%;
+  }
+  p {
+    display: none;
   }
   /*================
   Grid Container
